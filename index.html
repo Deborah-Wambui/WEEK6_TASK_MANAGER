@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Week 6 Lab - Modular Task Manager</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Task Manager</h1>
+      <p class="subtitle">Objects, Classes, and ES Modules in action</p>
+    </header>
+
+    <section class="add-task">
+      <form id="taskForm" autocomplete="off">
+        <input id="taskInput" name="title" type="text" placeholder="Add a new task..." aria-label="Task title" required />
+        <input id="dueDateInput" name="dueDate" type="date" aria-label="Due date">
+        <button type="submit" id="addBtn">Add</button>
+      </form>
+    </section>
+
+    <section class="search">
+      <input id="searchInput" type="text" placeholder="Search tasks..." aria-label="Search tasks">
+      <span id="searchCount" class="search-count"></span>
+    </section>
+
+    <section class="filters">
+
+    <section class="filters">
+      <div id="filterGroup" role="tablist" aria-label="Filters">
+        <button data-filter="all" class="active" role="tab" aria-selected="true">All</button>
+        <button data-filter="active" role="tab" aria-selected="false">Active</button>
+        <button data-filter="completed" role="tab" aria-selected="false">Completed</button>
+      </div>
+      <button id="clearCompleted" class="secondary" title="Remove all completed tasks">Clear Completed</button>
+    </section>
+
+    <section class="list">
+      <ul id="taskList" aria-live="polite"></ul>
+    </section>
+
+    <footer class="status">
+      <span id="counts">0 total, 0 active, 0 completed</span>
+    </footer>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/* Minimal, clean styling for the lab */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+  background: #fafafa;
+  color: #222;
+}
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+header h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+.subtitle { margin: 0 0 1rem; color: #555; }
+.add-task form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+#taskInput {
+  padding: 0.75rem 0.85rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+#addBtn, .secondary {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #222;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.secondary {
+  border-color: #888;
+  background: #fff;
+  color: #333;
+}
+.filters {
+  margin: 1rem 0 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+#filterGroup button {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+}
+#filterGroup button.active { border-color: #222; font-weight: 600; }
+.list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid #eee;
+}
+.task .left {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.task .title {
+  line-height: 1.4;
+  word-break: break-word;
+}
+.task.done .title { text-decoration: line-through; color: #777; }
+.task button.delete {
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.status { margin-top: 0.5rem; color: #555; }
+.edit-input {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #222;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+.search {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#searchInput {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+}
+
+.search-count {
+  font-size: 0.875rem;
+  color: #555;
+  white-space: nowrap;
+}
+/* Due date styles */
+#dueDateInput {
+  padding: 0.75rem 0.85rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.add-task form {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.5rem;
+}
+
+.task.overdue {
+  border-left: 4px solid #d32f2f;
+  background-color: #fff5f5;
+}
+
+.task.overdue .title {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.due-date {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: #f5f5f5;
+  border-radius: 4px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.due-date.overdue-text {
+  background: #ffebee;
+  color: #d32f2f;
+  font-weight: 600;
+}
